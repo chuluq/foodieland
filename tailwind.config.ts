@@ -59,6 +59,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
+        lobster: ["var(--font-lobster)"],
       },
     },
   },

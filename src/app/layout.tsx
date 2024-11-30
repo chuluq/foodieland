@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Lobster } from "next/font/google"
 
 import "./globals.css"
 
@@ -7,6 +7,13 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+})
+
+const lobster = Lobster({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-lobster",
 })
 
 export const metadata: Metadata = {
@@ -21,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${lobster.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }
