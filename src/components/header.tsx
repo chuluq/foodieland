@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Facebook from "@/assets/facebook.svg";
-import Instagram from "@/assets/instagram.svg";
-import Twitter from "@/assets/x.svg";
 
 import { landingConfig } from "@/config/landing";
 import { Separator } from "@/components/ui/separator";
+import Facebook from "@/assets/facebook.svg";
+import Instagram from "@/assets/instagram.svg";
+import Twitter from "@/assets/x.svg";
 
 export const Header = () => {
   return (
