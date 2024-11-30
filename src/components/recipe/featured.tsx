@@ -50,7 +50,7 @@ export const FeaturedRecipe = () => {
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <div className="space-y-2">
+            <div>
               <p className="font-bold">John Smith</p>
               <p className="text-sm font-medium text-black/60">15 March 2022</p>
             </div>
