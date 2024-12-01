@@ -1,5 +1,5 @@
 import { RecipeCard } from "@/components/recipes/card";
-import img1 from "@/assets/images/image 26.png";
+import { recipes } from "@/config/recipes";
 
 export const Recipes = () => {
   return (
@@ -12,42 +12,16 @@ export const Recipes = () => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-10 px-20">
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
-        <RecipeCard
-          img={img1}
-          timer={30}
-          title="Big and Juicy Wagyu Beef Cheeseburger"
-          category="Chicken"
-        />
+        {recipes.map((recipe, index) => (
+          <RecipeCard
+            key={index}
+            img={recipe.img}
+            timer={recipe.timer}
+            title={recipe.title}
+            category={recipe.category}
+            isFavorite={recipe.isFavorite}
+          />
+        ))}
       </div>
     </div>
   );

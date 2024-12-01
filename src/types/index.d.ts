@@ -1,3 +1,5 @@
+import { type StaticImageData } from "next/image";
+
 export type NavItem = {
   title: string;
   href: string;
@@ -25,4 +27,22 @@ export type LandingConfig = {
 export type Social = {
   url: string;
   icon: React.FC<React.SVGProps<SVGElement>>;
+};
+
+export enum RecipeCategory {
+  Snack = "Snack",
+  Fish = "Fish",
+  Breakfast = "Breakfast",
+  Healthy = "Healthy",
+  Meat = "Meat",
+  Sweet = "Sweet",
+  Noodles = "Noodles",
+}
+
+export type Recipe = {
+  img: StaticImageData;
+  title: string;
+  timer: number;
+  category: RecipeCategory;
+  isFavorite?: boolean;
 };

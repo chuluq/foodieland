@@ -1,4 +1,4 @@
-import type { LandingConfig, Social } from "@/types";
+import { type LandingConfig, type Social } from "@/types";
 
 import Facebook from "@/assets/facebook.svg";
 import Instagram from "@/assets/instagram.svg";
