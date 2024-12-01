@@ -2,6 +2,7 @@ import { Categories } from "@/components/categories";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { RecipeList } from "@/components/recipe/list";
+import { SubscriptionCard } from "@/components/subscription-card";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <RecipeList />
       <Categories />
+      <SubscriptionCard />
       <Footer />
     </div>
   );
