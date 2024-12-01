@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Timer, Utensils } from "lucide-react";
 
+import { LoveCircle } from "@/components/love-circle";
 import igPost from "@/assets/images/ig-post.png";
 
 export const MoreRecipes = () => {
@@ -34,8 +35,9 @@ export const MoreRecipes = () => {
 const RecipePost = () => {
   return (
     <div className="flex max-w-[290px] flex-col items-start">
-      <div className="h-[200px] w-[290px]">
+      <div className="relative h-[200px] w-[290px]">
         <Image src={igPost} alt="post-1" className="rounded-[20px]" />
+        <LoveCircle />
       </div>
       <p className="mb-6 mt-4 text-lg font-semibold leading-[26px]">
         Mixed Tropical Fruit Salad with Superfood Boosts
