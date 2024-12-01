@@ -12,12 +12,11 @@
     "prepare": "husky && husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",
       "prettier --write",
       "eslint --max-warnings 0 ."
-    ],
-    "*.js": "eslint --cache --fix"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.1",
