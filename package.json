@@ -8,7 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "prepare": "husky"
+    "lint:staged": "lint-staged",
+    "prepare": "husky && husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --max-warnings 0 ."
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.1",
