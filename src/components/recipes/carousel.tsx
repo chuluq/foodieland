@@ -3,9 +3,9 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { FeaturedRecipe } from "@/components/recipe/featured";
+import { FeaturedRecipe } from "@/components/recipes/featured";
 
-export const RecipeList = () => {
+export const RecipeCarousel = () => {
   return (
     <div className="px-10 pb-40 pt-10">
       <Carousel>
