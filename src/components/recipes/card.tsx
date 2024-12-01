@@ -15,7 +15,7 @@ export const RecipeCard = ({ img, timer, title, category }: TRecipeCard) => {
         <Image src={img} alt={title} className="rounded-[20px]" />
       </div>
       <h3 className="text-2xl font-semibold leading-7">{title}</h3>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-6">
         <div className="flex items-center gap-x-[10px] rounded-2xl bg-transparent py-2">
           <Timer size={24} color="black" />
           <p className="text-sm font-medium capitalize text-black/60">
