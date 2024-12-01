@@ -29,20 +29,19 @@ export type Social = {
   icon: React.FC<React.SVGProps<SVGElement>>;
 };
 
-export enum RecipeCategory {
-  Snack = "Snack",
-  Fish = "Fish",
-  Breakfast = "Breakfast",
-  Healthy = "Healthy",
-  Meat = "Meat",
-  Sweet = "Sweet",
-  Noodles = "Noodles",
-}
+type TRecipeCategory =
+  | "Snack"
+  | "Fish"
+  | "Breakfast"
+  | "Healthy"
+  | "Meat"
+  | "Sweet"
+  | "Noodles";
 
-export type Recipe = {
-  img: StaticImageData;
+export type TRecipe = {
+  img: string | StaticImageData;
   title: string;
   timer: number;
-  category: RecipeCategory;
+  category: TRecipeCategory;
   isFavorite?: boolean;
 };

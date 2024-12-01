@@ -1,5 +1,9 @@
-import { RecipeCard } from "@/components/recipes/card";
+import Image from "next/image";
+import { type TRecipe } from "@/types";
+
 import { recipes } from "@/config/recipes";
+import { LoveCircle } from "@/components/love-circle";
+import { RecipeBadge } from "@/components/recipes/badge";
 
 export const Recipes = () => {
   return (
@@ -12,15 +16,24 @@ export const Recipes = () => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-10 px-20">
-        {recipes.map((recipe, index) => (
-          <RecipeCard
+        {recipes.map((recipe: TRecipe, index) => (
+          <div
             key={index}
-            img={recipe.img}
-            timer={recipe.timer}
-            title={recipe.title}
-            category={recipe.category}
-            isFavorite={recipe.isFavorite}
-          />
+            className="max-h-[434px] max-w-[400px] space-y-6 rounded-[30px] bg-gradient-to-b from-[#E7F9FD]/0 to-[#E7F9FD]/100 px-4 pb-8 pt-4"
+          >
+            <div className="relative h-[250px] w-[368px] fill-[#C4C4C4]">
+              <Image
+                src={recipe.img}
+                alt={recipe.title}
+                className="rounded-[20px]"
+                width={368}
+                height={250}
+              />
+              {recipe.isFavorite ? <LoveCircle /> : null}
+            </div>
+            <h3 className="text-2xl font-semibold leading-7">{recipe.title}</h3>
+            <RecipeBadge timer={recipe.timer} category={recipe.category} />
+          </div>
         ))}
       </div>
     </div>
