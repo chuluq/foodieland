@@ -8,10 +8,10 @@ export const LearnMore = () => {
     <div className="flex items-center gap-x-11 px-20 pb-[160px]">
       <div className="space-y-[72px]">
         <div className="space-y-6">
-          <h1 className="font-semibold text-5xl leading-snug max-w-xl">
+          <h1 className="max-w-xl text-5xl font-semibold leading-snug">
             Everyone can be a chef in their own kitchen
           </h1>
-          <p className="text-black/60 leading-7 max-w-[508px]">
+          <p className="max-w-[508px] leading-7 text-black/60">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
           </p>
