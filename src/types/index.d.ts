@@ -36,7 +36,11 @@ type TRecipeCategory =
   | "Healthy"
   | "Meat"
   | "Sweet"
-  | "Noodles";
+  | "Noodles"
+  | "Japanese"
+  | "Western"
+  | "Eastern"
+  | "Seafood";
 
 export type TRecipe = {
   img: string | StaticImageData;
