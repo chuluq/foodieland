@@ -1,8 +1,7 @@
 import Image from "next/image";
 
+import { Button } from "@/components/ui/button";
 import learnMore from "@/assets/images/learn-more.png";
-
-import { Button } from "./ui/button";
 
 export const LearnMore = () => {
   return (
