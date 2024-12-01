@@ -1,4 +1,8 @@
-import { LandingConfig } from "@/types"
+import type { LandingConfig, Social } from "@/types";
+
+import Facebook from "@/assets/facebook.svg";
+import Instagram from "@/assets/instagram.svg";
+import Twitter from "@/assets/x.svg";
 
 export const landingConfig: LandingConfig = {
   mainNav: [
@@ -23,4 +27,19 @@ export const landingConfig: LandingConfig = {
       href: "/#about",
     },
   ],
-}
+};
+
+export const socials: Social[] = [
+  {
+    url: "https://facebook.com",
+    icon: Facebook,
+  },
+  {
+    url: "https://twitter.com",
+    icon: Twitter,
+  },
+  {
+    url: "https://instagram.com",
+    icon: Instagram,
+  },
+];

@@ -1,17 +1,15 @@
 import Link from "next/link";
 
-import { landingConfig } from "@/config/landing";
+import { landingConfig, socials } from "@/config/landing";
 import { Separator } from "@/components/ui/separator";
-import Facebook from "@/assets/facebook.svg";
-import Instagram from "@/assets/instagram.svg";
-import Twitter from "@/assets/x.svg";
+import { Logo } from "@/components/logo";
 
 export const Footer = () => {
   return (
     <footer className="flex flex-col gap-12 px-20 pb-12 pt-40">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-4">
-          <h1 className="font-lobster text-2xl text-black">Foodieland.</h1>
+          <Logo />
           <p className="text-base leading-7 text-black/60">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </p>
@@ -35,15 +33,11 @@ export const Footer = () => {
           <span className="text-[#FF7967]">LookQ</span>
         </p>
         <div className="flex items-center gap-10">
-          <div className="size-5">
-            <Facebook />
-          </div>
-          <div className="size-5">
-            <Twitter />
-          </div>
-          <div className="size-5">
-            <Instagram />
-          </div>
+          {socials.map((soc, index) => (
+            <a key={index} href={soc.url} target="_blank" className="size-5">
+              <soc.icon />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

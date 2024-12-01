@@ -1,4 +1,4 @@
-import { SiteConfig } from "@/types"
+import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "Foodieland.",
@@ -11,4 +11,4 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/",
     instagram: "https://instagram.com/",
   },
-}
+};
