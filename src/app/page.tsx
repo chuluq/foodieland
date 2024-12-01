@@ -1,6 +1,7 @@
 import { Categories } from "@/components/categories";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { InstagramPost } from "@/components/instagram-post";
 import { LearnMore } from "@/components/learn-more";
 import { Recipes } from "@/components/recipes";
 import { RecipeCarousel } from "@/components/recipes/carousel";
@@ -14,6 +15,7 @@ export default function Home() {
       <Categories />
       <Recipes />
       <LearnMore />
+      <InstagramPost />
       <SubscriptionCard />
       <Footer />
     </div>
