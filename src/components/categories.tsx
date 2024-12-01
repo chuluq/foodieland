@@ -36,7 +36,7 @@ type CategoryProps = {
 
 const Category = ({ title, img }: CategoryProps) => {
   return (
-    <div className="flex w-[180px] flex-col gap-y-[30px] rounded-2xl bg-white px-10 pb-[30px] shadow">
+    <div className="flex w-[180px] flex-col gap-y-[30px] rounded-2xl bg-gradient-to-b from-[#708246]/0 to-[#708246]/10 px-10 pb-[30px] shadow">
       <div className="size-[120px]">
         <Image src={img} alt={title} />
       </div>
