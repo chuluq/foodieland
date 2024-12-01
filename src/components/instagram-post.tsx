@@ -15,12 +15,12 @@ export const InstagramPost = () => {
           <h1 className="text-5xl font-semibold">
             Check out @foodieland on Instagram
           </h1>
-          <p className="text-center text-black/60 leading-7 max-w-[840px]">
+          <p className="max-w-[840px] text-center leading-7 text-black/60">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
           </p>
         </div>
-        <div className="flex items-center gap-x-10 justify-center">
+        <div className="flex items-center justify-center gap-x-10">
           <Image src={post1} alt="post-1" />
           <Image src={post2} alt="post-2" />
           <Image src={post3} alt="post-3" />
