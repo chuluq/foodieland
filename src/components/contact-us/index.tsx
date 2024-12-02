@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import { recipes } from "@/config/recipes";
+import { MoreRecipes } from "@/components/recipes/more-recipes";
+import { SubscriptionCard } from "@/components/subscription-card";
 import chef from "@/assets/images/chef.png";
 
 import { ContactForm } from "./form";
@@ -15,6 +18,15 @@ export const ContactUs = () => {
           </div>
           <ContactForm />
         </div>
+      </div>
+      <div className="px-20 py-40">
+        <SubscriptionCard />
+      </div>
+      <div className="px-20">
+        <MoreRecipes
+          title="Check out the delicious recipe"
+          recipes={recipes.slice(8, 12)}
+        />
       </div>
     </div>
   );
