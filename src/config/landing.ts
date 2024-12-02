@@ -16,7 +16,7 @@ export const landingConfig: LandingConfig = {
     },
     {
       title: "Blog",
-      href: "/#blog",
+      href: "/blog",
     },
     {
       title: "Contact",

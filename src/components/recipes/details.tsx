@@ -5,11 +5,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { NutritionCard } from "@/components/recipes/nutrition-card";
 import { Timer } from "@/components/recipes/timer";
-import meatball from "@/assets/images/chicken-meatballs.png";
 import instruction from "@/assets/images/instruction.png";
 
 import { Ingredient } from "./ingredient";
 import { Instruction } from "./instruction";
+import { RecommendedRecipeCard } from "./recommendation";
 
 export const RecipeDetails = () => {
   return (
@@ -190,24 +190,6 @@ export const RecipeDetails = () => {
             <RecommendedRecipeCard />
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-const RecommendedRecipeCard = () => {
-  return (
-    <div className="flex gap-x-6">
-      <Image
-        src={meatball}
-        alt="meatball"
-        className="rounded-[20px] fill-[#C4C4C4]"
-      />
-      <div className="space-y-4">
-        <h4 className="text-xl font-semibold leading-7">
-          Chicken Meatball with Creamy Chees...
-        </h4>
-        <p className="text-sm font-medium">By Andreas Paula</p>
       </div>
     </div>
   );
