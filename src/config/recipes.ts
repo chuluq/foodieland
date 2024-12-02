@@ -6,6 +6,7 @@ import pasta from "@/assets/images/chicken-pasta.png";
 import chickenRice from "@/assets/images/chicken-rice.png";
 import chickenSalad from "@/assets/images/chicken-salad.png";
 import friedRice from "@/assets/images/fried-rice.png";
+import fruitSalad from "@/assets/images/fruit-salad.png";
 import pancake from "@/assets/images/pancake.png";
 import ramen from "@/assets/images/ramen.png";
 import salad from "@/assets/images/salad.png";
@@ -74,7 +75,7 @@ export const recipes: TRecipe[] = [
     isFavorite: false,
   },
   {
-    img: salad,
+    img: fruitSalad,
     title: "Mixed Tropical Fruit Salad with Superfood Boosts",
     timer: 30,
     category: "Healthy",

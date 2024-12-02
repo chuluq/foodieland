@@ -16,7 +16,7 @@ export const Recipes = () => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-10 px-20">
-        {recipes.slice(0, 9).map((recipe: TRecipe, index) => (
+        {recipes.slice(0, 8).map((recipe: TRecipe, index) => (
           <div
             key={index}
             className="max-h-[434px] max-w-[400px] space-y-6 rounded-[30px] bg-gradient-to-b from-[#E7F9FD]/0 to-[#E7F9FD]/100 px-4 pb-8 pt-4"

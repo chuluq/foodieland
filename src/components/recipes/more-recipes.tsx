@@ -2,27 +2,40 @@ import Image from "next/image";
 import { TRecipe } from "@/types";
 import { Timer, Utensils } from "lucide-react";
 
-import { recipes } from "@/config/recipes";
+import { cn } from "@/lib/utils";
 import { LoveCircle } from "@/components/love-circle";
 
-export const MoreRecipes = () => {
+type TMoreRecipes = {
+  title: string;
+  description?: string;
+  recipes: TRecipe[];
+};
+
+export const MoreRecipes = ({ title, description, recipes }: TMoreRecipes) => {
   return (
-    <div className="px-20 py-40">
-      <div className="flex flex-col gap-y-20">
-        <div className="flex items-center justify-between">
-          <h1 className="max-w-xl text-5xl font-semibold leading-normal">
-            Try this delicious recipe to make your day
-          </h1>
-          <p className="max-w-[620px] leading-7 text-black/60">
-            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
-          </p>
-        </div>
-        <div className="grid grid-cols-4 gap-10">
-          {recipes.slice(8, 18).map((recipe, index) => (
-            <RecipePost key={index} {...recipe} />
-          ))}
-        </div>
+    <div className="flex flex-col gap-y-20">
+      <div
+        className={cn(
+          "flex items-center",
+          description ? "justify-between" : "justify-center"
+        )}
+      >
+        <h1
+          className={cn(
+            "font-semibold leading-normal",
+            description ? "max-w-xl text-left text-5xl" : "text-center text-4xl"
+          )}
+        >
+          {title}
+        </h1>
+        {description ? (
+          <p className="max-w-[620px] leading-7 text-black/60">{description}</p>
+        ) : null}
+      </div>
+      <div className="grid grid-cols-4 gap-10">
+        {recipes.map((recipe, index) => (
+          <RecipePost key={index} {...recipe} />
+        ))}
       </div>
     </div>
   );
