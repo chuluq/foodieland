@@ -1,9 +1,8 @@
 import Image from "next/image";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
 import fruitSalad from "@/assets/images/fruit-salad.png";
-
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Separator } from "../ui/separator";
 
 export const BlogItem = () => {
   return (
